@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+    * MIT License
+    
+    * Copyright (c) 2018.  Amazon Web Services, Inc. All Rights Reserved.
+    
+    * Permission is hereby granted, free of charge, to any person obtaining a copy
+    * of this software and associated documentation files (the "Software"), to deal
+    * in the Software without restriction, including without limitation the rights
+    * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    * copies of the Software, and to permit persons to whom the Software is
+    * furnished to do so, subject to the following conditions:
+    
+    * The above copyright notice and this permission notice shall be included in all
+    * copies or substantial portions of the Software.
+    
+    * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    * SOFTWARE.
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Amazon Neptune | Graph Visualization Demo</title>
+    
+    <style type="text/css">
+        html, body {
+            font: 10pt arial;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            border: 1px solid lightgray;
+        }
+        #config {
+            float:right;
+            width: 400px;
+            height: 600px;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+    <script type="text/javascript" src="vis.js"></script>
+    <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/main.js"></script> 
+                
+            </head>
+            
+            <body>
+                <div class="container">
+                    <nav class="navbar navbar-light bg-light">
+                        <a class="navbar-brand" href="#">
+                          <img src="images/logo.png" width="50" height="50" class="d-inline-block align-top" alt="">
+                          AWS Infrastructure As Graph
+                        </a>
+                      </nav>
+                      <div class="jumbotron">
+                        <p class="lead">Visualize AWS Infrastructure as graph using Amazon Neptune &amp; AWS Config</p>
+                        <hr class="my-4">
+                        <p><i>Represent your AWS infrastructure as an interactive property graph. Populate property graph from AWS Config and store it in Amazon Neptune</i></p>
+                        <p><i></i></p>
+                        <p class="lead">
+                          <a class="btn btn-primary btn-sm" href="#" role="button">Blogpost</a>
+                        </p>
+                      </div>
+                      <div class="row">
+                        <div class="col-5 input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="findbyID" >Find resource by ID</span>
+                            </div>
+                            <input type="text" class="form-control" id="resource_id" placeholder="i-08c8bf7b37c8ffa6a">
+                            <button class="btn btn-info" type="submit" id="go_id">Find</button>
+                        </div>
+                        <div class="col-5 input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="findbyLabel" >Find resource by Label</span>
+                            </div>
+                            <input type="text" class="form-control" id="resource_label" placeholder="Instance" >
+                            <button class="btn btn-info" type="submit" id="go_label">Find</button>
+                        </div>
+                        <!--
+                        <label for="resource_id">Find Resource By ID: </label>
+                        <input id="resource_id">
+                        <input type="submit" id="go_id" value="Go_ID">
+                        <label for="resource_label">Find Resource By Label: </label>
+                        <input id="resource_label">
+                        <input type="submit" id="go_label" value="Go_Label">
+                        -->
+                      </div>
+                      <div class="row">
+                        
+                        <div class="col-12 mh-100">
+                            <div id="mynetwork" ></div>
+                        </div>
+                        
+                      </div>
+                  </div>
+                <div class="ui-widget">
+                    
+                </div>
+                
+                
+                
+            </body></html>
+            
