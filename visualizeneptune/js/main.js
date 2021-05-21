@@ -1,6 +1,6 @@
 
-//var PROXY_API_URL = "https://djbw5bg08l.execute-api.eu-west-1.amazonaws.com/test";
-var PROXY_API_URL = "https://djbw5bg08l.execute-api.eu-west-1.amazonaws.com/test";
+//var PROXY_API_URL = "https://abcxyz.execute-api.eu-west-1.amazonaws.com/test";
+var PROXY_API_URL = "https://abcxyz.execute-api.eu-west-1.amazonaws.com/test";
 
 // var nodes = null;
 var edges = null;
