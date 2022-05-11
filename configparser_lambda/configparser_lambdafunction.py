@@ -48,7 +48,7 @@ def insert_edge_graph(edge_id, edge_from, edge_to, to_vertex_label, edge_label):
     if edge_exists_id:
         return
 
-    result = g.V(str(edge_from)).addE(str(edge_label)).to(g.V(str(edge_to))).property(T.id, str(edge_id)).next()
+    result = g.V(str(edge_from)).addE(str(edge_label)).to(__.V(str(edge_to))).property(T.id, str(edge_id)).next()
 
 def parse_vertex_info(vertex_input):
     
